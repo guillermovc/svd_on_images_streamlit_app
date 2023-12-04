@@ -105,15 +105,13 @@ with contextlib.suppress(NameError):
             f"Original width = {pil_img.size[0]}px and height = {pil_img.size[1]}px"
         )
 
-        st.caption("All changes are applied on top of the previous change.")
-
 
     # SVD Decomposition
     k = st.slider(label="Number of components", min_value=1, max_value=h, value=10, step=2)
     svd = TruncatedSVD(n_components=k)
     reconstructed_image = svd_and_reconstruct(img_arr, svd)
 
-    cols[1].image(reconstructed_image, clamp=[0,1.0])
+    cols[1].image(reconstructed_image, clamp=[0,1.0], caption=f"Reconstructed image ({k} components)")
 
     st.subheader("Cumulative Variance")
     plot_cumulative_variance(svd, k)
