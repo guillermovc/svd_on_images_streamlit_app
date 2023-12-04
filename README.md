@@ -12,4 +12,4 @@ In essence, this Streamlit app brings the power of SVD to your fingertips, makin
 
 Feel free to explore the app, upload your images, and witness firsthand the transformative effects of Singular Value Decomposition. Happy decomposing!
 
-![Alt text](interface.png)
+![App demo](app_demo.png)
